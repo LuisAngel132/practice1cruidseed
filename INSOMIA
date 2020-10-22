@@ -1,0 +1,60 @@
+VISTA DE COMENTARIOS POR PERSONA
+http://localhost:8000/api/vpcomentario/1
+-------------------------------------------
+VISTA DE COMENTARIOS POR PRODUCTO
+http://localhost:8000/api/vprcomentario
+----------------------------------------
+ELIMINAR COMENTARIOS DEL PRODUCTO
+http://localhost:8000/api/ecomentario/1
+--------------------------------------
+INSERTAR COMENTARIOS
+http://localhost:8000/api/comentarios
+{
+"producto":"2",
+"comentario":"delicioso",
+"persona":"2"
+}
+--------------------------------------
+ACTUALIZAR PRODUCTOS
+http://localhost:8000/api/aproducto/2
+{
+	"producto":"pizza"
+}
+----------------------------------------
+ELIMINAR PRODUCTOS
+http://localhost:8000/api/eproducto/1
+-----------------------------------------
+INSERTAR PRODUCTOS
+curl --request POST \
+  --url http://localhost:8000/api/producto \
+  --header 'content-type: application/json' \
+  --data '{
+	"producto":"coca"
+}'
+-----------------------------------------
+VER PRODUCTOS
+curl --request GET \
+  --url http://localhost:8000/api/vproducto \
+  --header 'content-type: application/json'
+-----------------------------------------
+VER PERSONAS
+curl --request GET \
+  --url http://localhost:8000/api/vpersona
+-----------------------------------------
+INSERTAR PERSONAS
+
+curl --request POST \
+  --url http://localhost:8000/api/persona \
+  --header 'content-type: application/json' \
+  --data '{
+	"nombre":"luis"
+}'
+--------------------------------------------
+ELIMINAR PERSONAS
+ http://localhost:8000/api/epersona/1
+ -------------------------------------------
+ ACTUALIZAR PERSONAS
+  http://localhost:8000/api/apersona/1
+  {
+	"nombre":"fer"
+}
